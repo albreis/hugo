@@ -1,5 +1,36 @@
+<<<<<<< HEAD
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+=======
+/hugo
+docs/public*
+/.idea
+.vscode/*
+hugo.exe
+*.test
+*.prof
+nohup.out
+cover.out
+*.swp
+*.swo
+.DS_Store
+*~
+vendor/*/
+*.bench
+*.debug
+coverage*.out
+
+dock.sh
+
+GoBuilds
+dist
+
+hugolib/hugo_stats.json
+resources/sunset.jpg
+
+vendor
+
+>>>>>>> 965760835dbd0a83b176e4ccf896ffb9ed38e6d7
