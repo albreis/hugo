@@ -1,0 +1,33 @@
+[Unit]
+Description=ersolucoesweb.com.br/blog
+Requires=network.target
+
+[Service]
+Type=simple
+User=webprodutora
+Group=webprodutora
+WorkingDirectory=/home/webprodutora/ersolucoesweb.com.br/_blog
+ExecStart=/home/webprodutora/gems/bin/bundle exec /home/webprodutora/gems/bin/jekyll serve --detach --verbose --trace
+TimeoutSec=30
+RestartSec=15s
+Restart=always
+
+Environment=GEM_HOME=/home/webprodutora/gems
+
+# security settings - recommended
+# NoNewPrivileges=yes
+# PrivateTmp=yes
+# PrivateDevices=yes
+# DevicePolicy=closed
+# ProtectSystem=strict
+# ReadWritePaths=/home/webprodutora/ersolucoesweb.com.br/_blog
+# #ReadOnlyPaths=
+# ProtectControlGroups=yes
+# ProtectKernelModules=yes
+# ProtectKernelTunables=yes
+# RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+# RestrictRealtime=yes
+# RestrictNamespaces=yes
+
+[Install]
+WantedBy=multi-user.target
